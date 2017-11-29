@@ -1,44 +1,29 @@
-@font-face{
-  font-family:'FuturaPTLight';
-  src: local('FuturaPT'), url(../fonts/FuturaPT-Light.woff2) format('woff2'),
-  url(../fonts/FuturaPT-Light.woff) format('woff');
-  font-weight:200;
-  font-style:normal
-}
-
-@font-face{
-  font-family:'FuturaPTBook';
-  src: local('FuturaPT'),
-  url(../fonts/FuturaPT-Book.woff2) format('woff2'),
-  url(../fonts/FuturaPT-Book.woff) format('woff');
-  font-weight:300;
-  font-style:normal
+@font-face {
+  font-family: "ComfortaaRegular";
+  src: url("../fonts/ComfortaaRegular/ComfortaaRegular.eot");
+  src: url("../fonts/ComfortaaRegular/ComfortaaRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ComfortaaRegular/ComfortaaRegular.woff") format("woff"),
+  url("../fonts/ComfortaaRegular/ComfortaaRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: 'FuturaPTMedium';
-  src: local('FuturaPT'), url(../fonts/FuturaPT-Medium.woff2) format('woff2'), url(../fonts/FuturaPT-Medium.woff) format('woff');
-  font-weight: 400;
-  font-style: normal
+  font-family: "ComfortaaLight";
+  src: url("../fonts/ComfortaaLight/ComfortaaLight.eot");
+  src: url("../fonts/ComfortaaLight/ComfortaaLight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ComfortaaLight/ComfortaaLight.woff") format("woff"),
+  url("../fonts/ComfortaaLight/ComfortaaLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: 'FuturaPTDemi';
-  src: local('FuturaPT'), url(../fonts/FuturaPT-Demi.woff2) format('woff2'), url(../fonts/FuturaPT-Demi.woff) format('woff');
-  font-weight: 500;
-  font-style: normal
-}
-
-@font-face {
-  font-family: 'FuturaPTBold';
-  src: local('FuturaPT'), url(../fonts/FuturaPT-Bold.woff2) format('woff2'), url(../fonts/FuturaPT-Bold.woff) format('woff');
-  font-weight: 600;
-  font-style: normal
-}
-
-@font-face {
-  font-family: 'FuturaPTExtraBold';
-  src: local('FuturaPT'), url(../fonts/FuturaPT-Extrabold.woff2) format('woff2'), url(../fonts/FuturaPT-Extrabold.woff) format('woff');
-  font-weight: 700;
-  font-style: normal
+  font-family: "ComfortaaBold";
+  src: url("../fonts/ComfortaaBold/ComfortaaBold.eot");
+  src: url("../fonts/ComfortaaBold/ComfortaaBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ComfortaaBold/ComfortaaBold.woff") format("woff"),
+  url("../fonts/ComfortaaBold/ComfortaaBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
