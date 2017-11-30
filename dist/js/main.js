@@ -80,5 +80,27 @@ $document.ready(function () {
     }
   }
 
+  /**
+   * tooltip bootstrap
+   */
+
+  $('[data-toggle="tooltip"]').tooltip();
+
+
+  /**
+   * main slider
+   */
+  $('.js-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    arrows: false,
+    autoplaySpeed: 5000,
+    //autoplay: true
+  });
+
+
 });
 

@@ -41,7 +41,10 @@
     transform: translateY(-100%);
   }
 }
-
+.logo-header {
+  width: 200px;
+  margin: -15px 0 -15px 0;
+}
 /*
 * @subsection General Styles
 */
@@ -618,8 +621,6 @@
 .rd-navbar-static .rd-navbar-nav > li,
 .rd-navbar-fullwidth .rd-navbar-nav > li {
   display: block;
-  letter-spacing: .05em;
-  text-transform: uppercase;
   color: #fff;
   transition: .3s all ease;
 }
@@ -627,10 +628,12 @@
 .rd-navbar-static .rd-navbar-nav > li a,
 .rd-navbar-fullwidth .rd-navbar-nav > li a {
   position: relative;
-  padding: 8px 24px;
-  font: 700 14px/24px $fontBold;
+  padding: 8px 19px;
+  font-family: $fontBold;
+  font-size: 14px;
   border-radius: 30px;
   color: #fff;
+  text-transform: uppercase;
   background: transparent;
   transition: .3s all ease;
 }
@@ -640,6 +643,7 @@
 .rd-navbar-fullwidth .rd-navbar-nav > li:hover a {
   color: #41bcc4;
   background: #fff;
+  text-decoration: none;
 }
 
 .rd-navbar-static .rd-navbar-nav > li.active a,
@@ -1094,7 +1098,7 @@
   top: 0;
   right: 0;
   z-index: 999;
-  background: #063a5e;
+  background: rgba(#063a5e, .8);
 }
 
 .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-nav .rd-navbar-megamenu, .rd-navbar-static.rd-navbar--is-clone .rd-navbar-nav .rd-navbar-megamenu,
@@ -1325,7 +1329,7 @@
 
 .rd-navbar-static .rd-navbar-right-side {
   width: 100%;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   text-align: right;
 }
 
@@ -1783,6 +1787,7 @@
 .rd-navbar-fixed .rd-navbar-nav li:hover > a, .rd-navbar-fixed .rd-navbar-nav li:hover > a:hover, .rd-navbar-fixed .rd-navbar-nav li.focus > a, .rd-navbar-fixed .rd-navbar-nav li.focus > a:hover {
   color: #fff;
   background: #41d0d9;
+  text-decoration: none;
 }
 
 .rd-navbar-fixed .rd-navbar-nav li:hover > .rd-navbar-submenu-toggle:after, .rd-navbar-fixed .rd-navbar-nav li.focus > .rd-navbar-submenu-toggle:after {
@@ -2151,4 +2156,11 @@ ul ul, ul ol, ol ul, ol ol {
 }
 .rd-navbar-brand {
   text-align: center;
+}
+.slider-menu-position .rd-navbar-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
 }

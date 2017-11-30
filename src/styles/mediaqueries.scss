@@ -4,7 +4,9 @@
 
 
 @media only screen and (max-width : 992px) {
-
+  .logo-header {
+    width: 110px;
+  }
 }
 
 
@@ -54,6 +56,7 @@ and (max-device-width : 667px) {
   .reveal-md-block {
     display: block !important;
   }
+
 }
 
 

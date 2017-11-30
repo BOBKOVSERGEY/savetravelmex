@@ -1,10 +1,26 @@
-.header-section {
-  background: rgba(#063A5E, .5);
-  padding: 5px 30px;
+.logo {
+    background: url(../images/logo.svg) no-repeat center;
+    width: 167px;
+    height: 74px;
 }
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.flag-united, .flag-france, .flag-russia {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: relative;
+  top: 3px;
+  transition: .3s;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+.flag-united {
+  background: url(../images/united-states.svg) no-repeat center;
+}
+.flag-france {
+  background: url(../images/france.svg) no-repeat center;
+}
+.flag-russia {
+  background: url(../images/russia.svg) no-repeat center;
 }
 
