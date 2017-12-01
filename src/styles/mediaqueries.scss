@@ -16,7 +16,9 @@
 
 
 @media only screen and (max-width : 480px) {
-
+  .slider__button {
+    margin-bottom: 10px;
+  }
 }
 
 
@@ -50,6 +52,23 @@ and (max-device-width : 667px) {
 
 
 @media only screen and (min-width : 992px) {
+  .slider__buttons {
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 1000%;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &:after {
+      left: 85%;
+    }
+    &:before {
+      right: 84%;
+    }
+  }
   .reveal-md-inline-block {
     display: inline-block;
   }

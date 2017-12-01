@@ -1,18 +1,29 @@
 .slider {
   position: relative;
   z-index: 1;
+  height: 700px;
+  overflow: hidden;
   &__item-bg {
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    background: rgba(22, 88, 139, 0.2) url('data:image/svg+xml,\
+    background: rgba(22, 88, 139, 0.4) url('data:image/svg+xml,\
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".20" >\
             <rect x="50" width="50" height="50" />\
             <rect y="50" width="50" height="50" />\
             </svg>');
     background-size: 2px 2px;
+  }
+  &__content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    margin-top: -20px;
+    transform: translate(-50%, -50%);
   }
   &__item {
     width: 100%;
@@ -20,5 +31,86 @@
     background-size: auto;
     background: no-repeat 50%;
     outline: 0;
+  }
+  &__heading {
+    font-size: 42px;
+    font-family: $fontBold;
+    color: #fff;
+    margin: 20px 0;
+    //text-transform: capitalize;
+  }
+  &__description {
+    font-size: 24px;
+    font-family: $fontBold;
+    color: #fff;
+  }
+  &__buttons {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+  &__button {
+    display: inline-block;
+    margin-left: 10px;
+    //margin-top: 10px;
+    min-width: 225px;
+    border-radius: 30px;
+    padding: 10px 19px;
+    font-size: 15px;
+    font-family: $fontBoldGoogle;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: .3s ease-out;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    &_primary {
+      color: #fff;
+      background-color: #41d0d9;
+      border-color: #41d0d9;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: #22a3ab;
+        border-color: #22a3ab;
+      }
+    }
+    &_white {
+      color: #41d0d9;
+      background-color: #fff;
+      border-color: #fff;
+    }
+  }
+  &__bottom-panel {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 1;
+    transform: translateX(-50%);
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 10000%;
+      height: 100%;
+      background: #fff;
+      //margin-bottom: -1px;
+    }
+    &:before {
+      right: 100%;
+      margin-right: -2px;
+    }
+    &:after {
+      left: 100%;
+      margin-left: -2px;
+    }
+  }
+  &__bottom-panel-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    cursor: pointer;
+    color: $colorWhite;
   }
 }

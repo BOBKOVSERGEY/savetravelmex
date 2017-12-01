@@ -1,5 +1,16 @@
-@import "variables";
 
+@import "variables";
+body {
+  font-size: 18px;
+  font-family: $fontRegular;
+  color: $colorGrayText;
+}
+a {
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
 @import "header";
 @import "menu";
 @import "slick";

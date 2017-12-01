@@ -18,13 +18,33 @@ var userAgent = navigator.userAgent.toLowerCase(),
   plugins = {
     pointerEvents: isIE < 11 ? "js/pointer-events.min.js" : false,
     rdNavbar: $(".rd-navbar"),
-    navbarToggle: $(".rd-navbar-toggle")
+    navbarToggle: $(".rd-navbar-toggle"),
+    customWaypoints: $('[data-custom-scroll-to]')
   };
 
 /**
  * Initialize All Scripts
  */
 $document.ready(function () {
+
+  /**
+   * Custom Waypoints
+   */
+  if (plugins.customWaypoints.length) {
+    var i;
+    for (i = 0; i < plugins.customWaypoints.length; i++) {
+      var $this = $(plugins.customWaypoints[i]);
+
+      $this.on('click', function (e) {
+        e.preventDefault();
+        $("body, html").stop().animate({
+          scrollTop: $("#" + $(this).attr('data-custom-scroll-to')).offset().top
+        }, 1000, function () {
+          $(window).trigger("resize");
+        });
+      });
+    }
+  }
 
 
   /**
@@ -93,12 +113,12 @@ $document.ready(function () {
   $('.js-slider').slick({
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     fade: true,
     cssEase: 'linear',
     arrows: false,
     autoplaySpeed: 5000,
-    //autoplay: true
+    autoplay: false
   });
 
 
