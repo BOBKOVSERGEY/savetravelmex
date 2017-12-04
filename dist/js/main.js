@@ -27,24 +27,7 @@ var userAgent = navigator.userAgent.toLowerCase(),
  */
 $document.ready(function () {
 
-  /**
-   * Custom Waypoints
-   */
-  if (plugins.customWaypoints.length) {
-    var i;
-    for (i = 0; i < plugins.customWaypoints.length; i++) {
-      var $this = $(plugins.customWaypoints[i]);
 
-      $this.on('click', function (e) {
-        e.preventDefault();
-        $("body, html").stop().animate({
-          scrollTop: $("#" + $(this).attr('data-custom-scroll-to')).offset().top
-        }, 1000, function () {
-          $(window).trigger("resize");
-        });
-      });
-    }
-  }
 
 
   /**
@@ -120,6 +103,25 @@ $document.ready(function () {
     autoplaySpeed: 5000,
     autoplay: false
   });
+
+  /**
+   * Custom Waypoints
+   */
+  if (plugins.customWaypoints.length) {
+    var i;
+    for (i = 0; i < plugins.customWaypoints.length; i++) {
+      var $this = $(plugins.customWaypoints[i]);
+
+      $this.on('click', function (e) {
+        e.preventDefault();
+        $("body, html").stop().animate({
+          scrollTop: $("#" + $(this).attr('data-custom-scroll-to')).offset().top
+        }, 1000, function () {
+          $(window).trigger("resize");
+        });
+      });
+    }
+  }
 
 
 });

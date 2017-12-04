@@ -1,0 +1,42 @@
+.about {
+  display: block;
+  padding: 40px 0;
+  &__heading {
+    text-align: center;
+    color: $colorBlackText;
+    font-family: $fontBoldGoogle;
+    font-size: 52px;
+  }
+  &__heading-description {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $colorBlackText;
+    font-family: $fontBoldGoogle;
+    font-size: 20px;
+  }
+  &__wrapper-button {
+    margin-top: 40px;
+    text-align: center;
+  }
+  &__button {
+    display: inline-block;
+    min-width: 240px;
+    padding: 10px 19px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-family: $fontBoldGoogle;
+    //text-transform: uppercase;
+    transition: .3s ease-out;
+    &_blue {
+      color: #fff;
+      background-color: #2f6890;
+      border-color: #2f6890;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: #1c3e56;
+        border-color: #1c3e56;
+      }
+    }
+  }
+}

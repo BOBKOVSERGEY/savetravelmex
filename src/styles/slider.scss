@@ -34,14 +34,14 @@
   }
   &__heading {
     font-size: 42px;
-    font-family: $fontBold;
+    font-family: $fontBoldGoogle;
     color: #fff;
     margin: 20px 0;
     //text-transform: capitalize;
   }
   &__description {
     font-size: 24px;
-    font-family: $fontBold;
+    font-family: $fontBoldGoogle;
     color: #fff;
   }
   &__buttons {
@@ -77,9 +77,15 @@
       color: #41d0d9;
       background-color: #fff;
       border-color: #fff;
+      &:hover, &:active, &:focus {
+        color: #fff;
+        background-color: #adadad;
+        border-color: #adadad;
+      }
     }
   }
   &__bottom-panel {
+    height: 33px;
     position: absolute;
     left: 50%;
     bottom: 0;

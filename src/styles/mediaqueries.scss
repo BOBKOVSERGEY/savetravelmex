@@ -11,20 +11,21 @@
 
 
 @media only screen and (max-width : 768px) {
-
-}
-
-
-@media only screen and (max-width : 480px) {
   .slider__button {
     margin-bottom: 10px;
   }
 }
 
 
+@media only screen and (max-width : 480px) {
+
+}
+
+
 @media only screen and (max-width : 375px) {
-
-
+  .categories-tours__item-heading {
+    font-size: 25px;
+  }
 }
 
 

@@ -1,8 +1,8 @@
-
 @import "variables";
+
 body {
   font-size: 18px;
-  font-family: $fontRegular;
+  font-family: $fontRegularGoogle;
   color: $colorGrayText;
 }
 a {
@@ -11,9 +11,16 @@ a {
     text-decoration: none;
   }
 }
+.page {
+  overflow: hidden;
+  background-color: #fff;
+}
 @import "header";
 @import "menu";
 @import "slick";
 @import "slider";
+@import "about";
+@import "categorytours";
+
 @import "scrolltotop";
 @import "mediaqueries";

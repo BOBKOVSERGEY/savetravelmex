@@ -628,7 +628,7 @@
 .rd-navbar-static .rd-navbar-nav > li a,
 .rd-navbar-fullwidth .rd-navbar-nav > li a {
   position: relative;
-  padding: 8px 19px;
+  padding: 8px 14px;
   font-family: $fontBoldGoogle;
   font-size: 14px;
   border-radius: 30px;
@@ -2162,5 +2162,4 @@ ul ul, ul ol, ol ul, ol ol {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
 }
