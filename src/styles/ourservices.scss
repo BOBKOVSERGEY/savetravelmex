@@ -1,0 +1,89 @@
+.our-services {
+  padding: 40px 0;
+  &__heading {
+    text-align: center;
+    color: $colorBlackText;
+    font-family: $fontBoldGoogle;
+    font-size: 52px;
+  }
+  &__description {
+    margin: 20px 0;
+  }
+  &__item-icon {
+    color: #41d0d9;
+    font-size: 48px;
+  }
+  &__item-heading {
+    text-transform: uppercase;
+    color: #41d0d9;
+    font-family: $fontBoldGoogle;
+    margin: 10px 0 20px 0;
+  }
+  &__item-description {
+    color: #adadad;
+    font-size: 15px;
+  }
+  &__item-dot {
+    letter-spacing: .2em;
+    font-size: 24px;
+    color: #adadad;
+  }
+}
+
+.our-services__item {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 20px 10px 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.our-services__item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 15px;
+  opacity: 0;
+}
+
+.our-services__item:before {
+  background: -moz-linear-gradient(120deg, #3589a7 10%, #43d0d9 70%);
+  background: -webkit-linear-gradient(120deg, #3589a7 10%, #43d0d9 70%);
+  background: -o-linear-gradient(120deg, #3589a7 10%, #43d0d9 70%);
+  background: -ms-linear-gradient(120deg, #3589a7 10%, #43d0d9 70%);
+  background: linear-gradient(120deg, #3589a7 10%, #43d0d9 70%);
+}
+
+@media (max-width: 1199px) {
+  .our-services__item:before {
+    opacity: 1;
+  }
+  .our-services__item .our-services__item-dot {
+    opacity: 0;
+  }
+  .our-services__item .our-services__item-heading, .our-services__item .our-services__item-description, .our-services__item .our-services__item-icon {
+    color: #fff;
+  }
+}
+
+@media (min-width: 1200px) {
+  .our-services__item:before, .our-services__item .our-services__item-heading,
+  .our-services__item .our-services__item-description, .our-services__item .our-services__item-dot, .our-services__item .our-services__item-icon {
+    transition: .3s all ease;
+  }
+  .our-services__item:hover .our-services__item-heading, .our-services__item:hover .our-services__item-description, .our-services__item:hover .our-services__item-icon  {
+    color: #fff;
+  }
+  .our-services__item:hover:before {
+    opacity: 1;
+  }
+  .our-services__item:hover .our-services__item-dot {
+    opacity: 0;
+  }
+}
