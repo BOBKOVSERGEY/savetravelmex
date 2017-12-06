@@ -1,0 +1,12 @@
+.blog {
+  padding: 40px 0;
+  &__heading {
+    text-align: center;
+    color: $colorBlackText;
+    font-family: $fontBoldGoogle;
+    font-size: 52px;
+  }
+  &__intro {
+    margin: 15px 0;
+  }
+}

@@ -1,7 +1,86 @@
 .reviews {
+  position: relative;
+  padding: 40px 0;
   background: url(../images/bg-reviews.jpg) no-repeat fixed;
+  background-size: cover;
   height: 700px;
+
   &__item {
-    padding: 0 35px;
+    padding: 0 55px;
+  }
+  &__heading {
+    text-align: center;
+    color: $colorWhite;
+    font-family: $fontBoldGoogle;
+    font-size: 52px;
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    //margin-top: -20px;
+    transform: translate(-50%, -50%);
+  }
+  &__item-img {
+    width: 140px;
+    height: 140px;
+    margin: 15px auto;
+    border-radius: 50%;
+    border: 7px solid rgba(#dad8d3, .4);
+    & img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  }
+  &__item-description {
+    color: $colorWhite;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  &__item-author {
+    color: $colorWhite;
+  }
+  &__button-all-review {
+    margin: 30px 15px;
+    overflow: hidden;
+  }
+  &__btn {
+    position: relative;
+    display: inline-block;
+    min-width: 240px;
+    padding: 10px 19px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-family: $fontBoldGoogle;
+    //text-transform: uppercase;
+    transition: .3s ease-out;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 1000%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &:before {
+      right: 110%;
+    }
+    &:after {
+      left: 110%;
+    }
+    &_blue {
+      color: #fff;
+      background-color: #2f6890;
+      border-color: #2f6890;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: #1c3e56;
+        border-color: #1c3e56;
+      }
+    }
   }
 }

@@ -130,11 +130,17 @@ $document.ready(function () {
     //margin:30,
     //stagePadding:30,
     smartSpeed:450,
-    nav:true,
-    dots:false,
+    //nav:true,
+    //dots:false,
     loop:true,
     navElement: 'div class="owl-slider-arrow"',
     navText:[],
+    responsive:{
+      480:{
+        nav:true,
+        dots:false,
+      }
+    }
 
   });
 
