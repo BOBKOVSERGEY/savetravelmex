@@ -218,17 +218,18 @@
 .owl-dots .owl-dot:hover span {
   background: #869791; }
 
+/* js-slider-reviews */
 .owl-slider-arrow {
   border: 0;
   position: absolute;
   top: 50%;
   z-index: 1;
-  margin-top: -50px;
+  margin-top: -40px;
   opacity: .8;
   transition: opacity .3s;
 }
 
-.owl-next, .owl-prev {
+.owl-slider-arrow.owl-next, .owl-slider-arrow.owl-prev {
   font: 400 40px/72px "FontAwesome";
   color: #fff;
   transition: .3s all ease;
@@ -245,11 +246,50 @@
   left: 0px;
 }
 
-.owl-prev:before {
+.owl-slider-arrow.owl-prev:before {
   content: "\f053";
 }
-.owl-next:before {
+.owl-slider-arrow.owl-next:before {
   content: "\f054";
 }
+/*end js-slider-reviews*/
+
+/* js-slider-blog */
+.owl-slider-arrow-blog {
+  border: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  margin-top: -40px;
+  opacity: .8;
+  transition: opacity .3s;
+}
+
+.owl-slider-arrow-blog.owl-next, .owl-slider-arrow-blog.owl-prev {
+  font: 400 40px/72px "FontAwesome";
+  color: #adadad;
+  transition: .3s all ease;
+}
+
+.owl-slider-arrow-blog:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.owl-slider-arrow-blog.owl-next {
+  right: 0px;
+}
+.owl-slider-arrow-blog.owl-prev {
+  left: 0px;
+}
+
+.owl-slider-arrow-blog.owl-prev:before {
+  content: "\f053";
+}
+.owl-slider-arrow-blog.owl-next:before {
+  content: "\f054";
+}
+/*end js-slider-blog*/
+
+
 
 

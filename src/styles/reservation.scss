@@ -1,0 +1,60 @@
+.reservation {
+  height: 600px;
+  background: url(../images/bg-reservation.jpg)  no-repeat center fixed;
+  background-size: cover;
+  &__wrapper{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(47, 104, 144, 0.8) 20%, rgba(64, 202, 213, 0.8) 80%);
+
+
+  }
+  &__wrapper-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".20" >\
+            <rect x="50" width="50" height="50" />\
+            <rect y="50" width="50" height="50" />\
+            </svg>');
+    background-size: 2px 2px;
+  }
+  &__heading {
+    color: $colorWhite;
+    font-family: $fontBoldGoogle;
+    font-size: 42px;
+  }
+  &__description {
+    margin: 30px 0;
+    color: $colorWhite;
+  }
+  &__button {
+    margin: 45px 15px;
+    overflow: hidden;
+    text-align: center;
+  }
+  &__btn {
+    position: relative;
+    display: inline-block;
+    min-width: 270px;
+    padding: 10px 19px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-family: $fontBoldGoogle;
+    transition: .3s ease-out;
+    &_blue {
+      color: #fff;
+      background-color: #2f6890;
+      border-color: #2f6890;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: #1c3e56;
+        border-color: #1c3e56;
+      }
+    }
+  }
+}

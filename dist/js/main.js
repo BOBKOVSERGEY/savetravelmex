@@ -123,7 +123,10 @@ $document.ready(function () {
     }
   }
 
-  $('.owl-carousel').owlCarousel({
+  /**
+   * owl - js-reviews main
+   */
+  $('.js-reviews').owlCarousel({
     animateOut: 'slideOutDown',
     animateIn: 'flipInX',
     items:1,
@@ -137,6 +140,42 @@ $document.ready(function () {
     navText:[],
     responsive:{
       480:{
+        nav:true,
+        dots:false,
+      }
+    }
+
+  });
+  /**
+   * owl - js-reviews main
+   */
+  $('.js-blog').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:3,
+    margin:70,
+    stagePadding:40,
+    smartSpeed:450,
+    //nav:true,
+    //dots:false,
+    loop:true,
+    navElement: 'div class="owl-slider-arrow-blog"',
+    navText:[],
+    responsive:{
+      0:{
+        items:1,
+        nav:false,
+        dots:true,
+        margin:30,
+        stagePadding:5,
+      },
+      700:{
+        items:2,
+        nav:false,
+        dots:true,
+      },
+      992:{
+        items:3,
         nav:true,
         dots:false,
       }
