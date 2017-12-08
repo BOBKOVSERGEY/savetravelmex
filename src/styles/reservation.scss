@@ -1,6 +1,6 @@
 .reservation {
   height: 600px;
-  background: url(../images/bigbg.jpg)  no-repeat center fixed;
+  background: url(../images/bg-rezervation-new.jpg)  no-repeat center fixed;
   background-size: cover;
   &__wrapper{
     width: 100%;
@@ -40,12 +40,27 @@
   &__btn {
     position: relative;
     display: inline-block;
-    min-width: 270px;
+    max-width: 270px;
     padding: 10px 19px;
     font-size: 18px;
     border-radius: 30px;
     font-family: $fontBoldGoogle;
     transition: .3s ease-out;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 1000%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &:before {
+      right: 110%;
+    }
+    &:after {
+      left: 110%;
+    }
     &_blue {
       color: #fff;
       background-color: #2f6890;

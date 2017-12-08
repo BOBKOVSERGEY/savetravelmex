@@ -1,11 +1,30 @@
 @media only screen and (max-width : 1200px) {
-
+  .footer__contacts-description {
+    font-size: 14px;
+  }
+  .footer__letter-description {
+    font-size: 14px;
+  }
 }
 
 
 @media only screen and (max-width : 992px) {
   .logo-header {
     width: 110px;
+  }
+  .footer__logo {
+    width: 270px;
+    margin: 0 auto;
+  }
+  .footer__logo:before {
+    top: 27px;
+    left: 84px;
+  }
+  .footer__copyright {
+   display: none;
+  }
+  .footer__letter-description {
+    display: none;
   }
 }
 
@@ -31,6 +50,14 @@
       font-size: 32px;
     }
   }
+  .reservation__btn {
+    font-size: 15px;
+  }
+  .footer__letter-heading {
+    margin: 20px 0;
+  }
+
+
 }
 
 
