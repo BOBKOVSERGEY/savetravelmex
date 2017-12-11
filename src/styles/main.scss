@@ -1,3 +1,4 @@
+@import "bootstrap";
 @import "variables";
 
 body {
@@ -15,6 +16,7 @@ a {
   overflow: hidden;
   background-color: #fff;
 }
+
 @import "header";
 @import "menu";
 @import "slick";

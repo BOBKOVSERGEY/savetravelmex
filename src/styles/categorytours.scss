@@ -1,5 +1,10 @@
 .categories-tours {
   padding: 40px 0;
+  &__heading {
+    text-align: center;
+    color: $colorBlackText;
+    margin-bottom: 60px;
+  }
   &__wrapper-item {
     & > [class*='col'] {
       padding-left: 0;

@@ -33,6 +33,12 @@
   .slider__button {
     margin-bottom: 10px;
   }
+  .slider {
+    height: 500px;
+    &__item {
+      height: 500px;
+    }
+  }
 }
 
 
@@ -56,7 +62,9 @@
   .footer__letter-heading {
     margin: 20px 0;
   }
-
+  .slider__heading {
+    font-size: 38px;
+  }
 
 }
 
