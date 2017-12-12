@@ -1,0 +1,10 @@
+.content {
+  padding: 60px 0;
+  & a {
+    color: #41d0d9;
+    transition: .3s all ease;
+    &:hover {
+      color: #22a3ab;
+    }
+  }
+}

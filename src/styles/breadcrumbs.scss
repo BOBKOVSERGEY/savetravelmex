@@ -1,0 +1,53 @@
+.breadcrumbs {
+  height: 400px;
+  background: url(../images/bg-breadcrumbs.jpg) rgba(22, 88, 139, 0.5) no-repeat center;
+  background-size: cover;
+  text-align: center;
+  &__bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 88, 139, 0.4) url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".20" >\
+            <rect x="50" width="50" height="50" />\
+            <rect y="50" width="50" height="50" />\
+            </svg>') ;
+    background-size: 2px 2px;
+    //display: flex;
+    //align-items: center;
+    padding-top: 158px;
+  }
+  &__heading {
+    color: $colorWhite;
+    font-family: $fontBoldGoogle;
+    font-size: 42px;
+  }
+  &__breadcrumb {
+    font-family: $fontBoldGoogle;
+    padding: 8px 0px;
+    margin: 10px 0 20px 0;
+    list-style: none;
+    display: inline-block;
+    font-size: 18px;
+    color: $colorWhite;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    &>.active {
+      //color: #777;
+    }
+    & a {
+      color: $colorWhite;
+      &:hover {
+        border-bottom: 1px solid $colorWhite;
+      }
+    }
+    &>li {
+      display: inline-block;
+    }
+    &>li+li:before {
+      padding: 0 5px;
+      color: $colorWhite;
+      content: "/\00a0";
+    }
+  }
+}

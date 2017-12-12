@@ -5,10 +5,26 @@
   .footer__letter-description {
     font-size: 14px;
   }
+  .breadcrumbs {
+    //height: 400px;
+
+    &__bg {
+      padding-top: 200px;
+    }
+  }
 }
 
 
 @media only screen and (max-width : 992px) {
+  .breadcrumbs {
+    height: 200px;
+
+    &__bg {
+      display: flex;
+      align-items: center;
+      padding-top: 0;
+    }
+  }
   .logo-header {
     width: 110px;
   }
@@ -64,6 +80,15 @@
   }
   .slider__heading {
     font-size: 38px;
+  }
+  .breadcrumbs {
+
+    &__heading {
+      font-size: 24px;
+    }
+    &__breadcrumb {
+      display: none;
+    }
   }
 
 }
