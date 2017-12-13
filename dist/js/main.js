@@ -147,7 +147,7 @@ $document.ready(function () {
 
   });
   /**
-   * owl - js-reviews main
+   * owl - js-blog main
    */
   $('.js-blog').owlCarousel({
     animateOut: 'slideOutDown',
@@ -160,6 +160,43 @@ $document.ready(function () {
     //dots:false,
     loop:true,
     navElement: 'div class="owl-slider-arrow-blog"',
+    navText:[],
+    responsive:{
+      0:{
+        items:1,
+        nav:false,
+        dots:true,
+        margin:30,
+        stagePadding:5,
+      },
+      700:{
+        items:2,
+        nav:false,
+        dots:true,
+      },
+      992:{
+        items:3,
+        nav:true,
+        dots:false,
+      }
+    }
+
+  });
+
+  /**
+   * owl - js-reviews-three main
+   */
+  $('.js-reviews-three').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:3,
+    margin:30,
+    stagePadding:30,
+    smartSpeed:450,
+    //nav:true,
+    //dots:false,
+    loop:true,
+    navElement: 'div class="owl-slider-arrow-reviews-three"',
     navText:[],
     responsive:{
       0:{

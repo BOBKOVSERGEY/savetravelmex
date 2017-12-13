@@ -290,6 +290,48 @@
 }
 /*end js-slider-blog*/
 
+/* js-slider-reviews-three */
+.owl-slider-arrow-reviews-three {
+  border: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  margin-top: -40px;
+  opacity: .8;
+  transition: opacity .3s;
+}
+
+.owl-slider-arrow-reviews-three.owl-next, .owl-slider-arrow-reviews-three.owl-prev {
+  font: 400 40px/72px "FontAwesome";
+  color: #adadad;
+  transition: .3s all ease;
+}
+
+.owl-slider-arrow-reviews-three:hover {
+ // opacity: .5;
+  color: #41d0d9;
+  cursor: pointer;
+}
+.owl-slider-arrow-reviews-three.owl-next {
+  right: 0px;
+}
+.owl-slider-arrow-reviews-three.owl-prev {
+  left: 0px;
+}
+
+.owl-slider-arrow-reviews-three.owl-prev:before {
+  content: "\f053";
+}
+.owl-slider-arrow-reviews-three.owl-next:before {
+  content: "\f054";
+}
+/*end js-slider-reviews-three*/
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,21 @@
+.reviews-three {
+  padding: 0 0 60px 0;
+  text-align: center;
+  &__heading {
+    color: $colorBlackText;
+    font-family: $fontBoldGoogle;
+    font-size: 52px;
+    margin-bottom: 30px;
+  }
+  &__item-img {
+    width: 169px;
+    height: 169px;
+    margin: 15px auto;
+    border-radius: 50%;
+    border: 7px solid rgba(#dad8d3, .4);
+    & img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  }
+}

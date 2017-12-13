@@ -16,15 +16,16 @@ a {
   overflow: hidden;
   background-color: #fff;
 }
-
+@import "slick";
+@import "owl";
+@import "animate";
 @import "header";
 @import "menu";
 @import "breadcrumbs";
 @import "content";
 @import "ourteam";
-@import "slick";
-@import "owl";
-@import "animate";
+@import "reviews-three";
+@import "reservation";
 @import "slider";
 @import "about";
 @import "categorytours";

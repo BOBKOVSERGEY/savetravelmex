@@ -59,10 +59,19 @@
 
 
 @media only screen and (max-width : 480px) {
+  .our-team__heading {
+    font-size: 32px;
+  }
   .reviews {
     &__item {
       padding: 0;
     }
+    &__heading {
+      font-size: 36px;
+    }
+  }
+  .reviews-three {
+
     &__heading {
       font-size: 36px;
     }
