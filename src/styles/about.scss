@@ -17,10 +17,12 @@
     font-size: 20px;
   }
   &__wrapper-button {
-    margin-top: 40px;
     text-align: center;
+    margin: 40px 15px 0 15px;
+    overflow: hidden;
   }
   &__button {
+    position: relative;
     display: inline-block;
     min-width: 240px;
     padding: 10px 19px;
@@ -29,6 +31,21 @@
     font-family: $fontBoldGoogle;
     //text-transform: uppercase;
     transition: .3s ease-out;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 1000%;
+      border: 1px solid #f6f6f6;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &:before {
+      right: 110%;
+    }
+    &:after {
+      left: 110%;
+    }
     &_blue {
       color: #fff;
       background-color: #2f6890;

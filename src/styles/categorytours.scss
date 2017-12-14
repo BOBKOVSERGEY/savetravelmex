@@ -1,9 +1,14 @@
 .categories-tours {
   padding: 40px 0;
+  &_category {
+    padding: 40px 0 0 0;
+  }
   &__heading {
     text-align: center;
     color: $colorBlackText;
     margin-bottom: 60px;
+    font-size: 32px;
+    font-family: $fontBoldGoogle;
   }
   &__wrapper-item {
     & > [class*='col'] {

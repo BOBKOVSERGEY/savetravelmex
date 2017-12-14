@@ -33,4 +33,44 @@
     font-size: 24px;
     letter-spacing: 2px;
   }
+  &__button-all-review {
+    margin: 30px 15px;
+    overflow: hidden;
+  }
+  &__btn {
+    position: relative;
+    display: inline-block;
+    min-width: 240px;
+    padding: 10px 19px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-family: $fontBoldGoogle;
+    //text-transform: uppercase;
+    transition: .3s ease-out;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 1000%;
+      border: 1px solid #f6f6f6;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &:before {
+      right: 110%;
+    }
+    &:after {
+      left: 110%;
+    }
+    &_blue {
+      color: #fff;
+      background-color: #2f6890;
+      border-color: #2f6890;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: #1c3e56;
+        border-color: #1c3e56;
+      }
+    }
+  }
 }

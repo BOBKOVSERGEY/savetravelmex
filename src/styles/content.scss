@@ -1,5 +1,9 @@
 .content {
   padding: 60px 0;
+  &_category {
+    padding: 60px 0 0 0;
+    text-align: center;
+  }
   & a {
     color: #41d0d9;
     transition: .3s all ease;
