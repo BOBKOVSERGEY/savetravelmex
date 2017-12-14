@@ -217,7 +217,42 @@ $document.ready(function () {
         dots:false,
       }
     }
+  });
 
+  /**
+   * owl - js-reviews-three main
+   */
+  $('.js-tours').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:3,
+    margin:50,
+    stagePadding:40,
+    smartSpeed:450,
+    //nav:true,
+    //dots:false,
+    loop:true,
+    navElement: 'div class="owl-slider-arrow-tours"',
+    navText:[],
+    responsive:{
+      0:{
+        items:1,
+        nav:false,
+        dots:true,
+        margin:30,
+        stagePadding:5,
+      },
+      700:{
+        items:2,
+        nav:false,
+        dots:true,
+      },
+      992:{
+        items:3,
+        nav:true,
+        dots:false,
+      }
+    }
   });
 
 });
