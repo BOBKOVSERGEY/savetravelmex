@@ -45,8 +45,8 @@
     display: inline-block;
     width: 50px;
     height: 50px;
-    color: #41d0d9;
-    border: 5px solid #41d0d9;
+    color: #adadad;
+    border: 5px solid #adadad;
     border-radius: 50%;
     transition: .3s all ease;
     font-size: 25px;
@@ -103,7 +103,6 @@
   &__contacts-description {
     font-size: 20px;
     font-family: $fontBoldGoogle;
-    color: $colorBlackText;
     flex: 0 1 auto;
   }
   &__letter-heading {
@@ -115,7 +114,6 @@
   }
   &__letter-description {
     font-family: $fontBoldGoogle;
-    color: $colorBlackText;
     margin-bottom: 30px;
   }
   &__letter-input-wrapper {
@@ -157,7 +155,6 @@
   }
   &__copyright {
     margin-top: 60px;
-    color: $colorBlackText;
 
     & a {
       color: #41d0d9;

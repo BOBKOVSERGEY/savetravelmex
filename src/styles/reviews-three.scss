@@ -7,6 +7,9 @@
     font-size: 52px;
     margin-bottom: 30px;
   }
+  &__item {
+    text-align: center;
+  }
   &__item-img {
     width: 169px;
     height: 169px;
@@ -17,5 +20,17 @@
       max-width: 100%;
       border-radius: 50%;
     }
+  }
+  &__item-description {
+    font-size: 14px;
+  }
+  &__item-name {
+    margin-top: 15px;
+    font-family: $fontBoldGoogle;
+  }
+  &__item-dots {
+    font-family: $fontBoldGoogle;
+    font-size: 24px;
+    letter-spacing: 2px;
   }
 }
