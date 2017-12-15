@@ -1,0 +1,216 @@
+.reservation-tours {
+  height: 750px;
+  background: url(../images/bg-rezervation-new.jpg)  no-repeat center fixed;
+  background-size: cover;
+  &__wrapper{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(47, 104, 144, 0.6) 20%, rgba(64, 202, 213, 0.6) 80%);
+  }
+  &__wrapper-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".20" >\
+            <rect x="50" width="50" height="50" />\
+            <rect y="50" width="50" height="50" />\
+            </svg>');
+    background-size: 2px 2px;
+  }
+  &__heading {
+    color: $colorWhite;
+    font-family: $fontBoldGoogle;
+    font-size: 42px;
+  }
+  &__description {
+    margin: 30px 0;
+    color: $colorWhite;
+  }
+  &__button {
+    margin: 45px 15px;
+    overflow: hidden;
+    text-align: center;
+  }
+  &__btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    max-width: 270px;
+    padding: 10px 19px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-family: $fontBoldGoogle;
+    transition: .3s ease-out;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 1000%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &:before {
+      right: 110%;
+    }
+    &:after {
+      left: 110%;
+    }
+    &_blue {
+      color: #fff;
+      background-color: #41d0d9;
+      border-color: #41d0d9;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: #22a3ab;
+        border-color: #22a3ab;
+      }
+    }
+  }
+  &__input {
+    height: 50px;
+    width: 100%;
+    padding: 10px 19px;
+    font-size: 18px;
+    color: $colorWhite;
+    background: none;
+    border: 2px solid $colorWhite;
+    border-radius: 35px;
+    transition: .3s ease-out;
+    &::-webkit-input-placeholder {
+      color: $colorWhite;
+    }
+    &::-moz-placeholder {
+      color: $colorWhite;
+    }
+    &:-ms-input-placeholder {
+      color: $colorWhite;
+    }
+    &:placeholder-shown {
+      color: $colorWhite;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 5px $colorWhite;
+      transform: scale(1.02);
+    }
+  }
+  &__textarea {
+    width: 100%;
+    height: 170px;
+    min-height: 50px;
+    max-height: 370px;
+    color: $colorWhite;
+    resize: vertical;
+    border-radius: 25px;
+    padding: 10px 19px;
+    font-size: 18px;
+    background: none;
+    border: 2px solid $colorWhite;
+    transition: .3s ease-out;
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 5px $colorWhite;
+      transform: scale(1.02);
+    }
+    &::-webkit-input-placeholder {
+      color: $colorWhite;
+
+    }
+    &::-moz-placeholder {
+      color: $colorWhite;
+
+    }
+    &:-ms-input-placeholder {
+      color: $colorWhite;
+
+    }
+    &:placeholder-shown {
+      color: $colorWhite;
+
+    }
+  }
+  &__wrapper-input, &__wrapper-textarea {
+    margin-bottom: 15px;
+  }
+  &__wrapper-button {
+    margin: 15px 15px;
+    overflow: hidden;
+    text-align: center;
+  }
+  &__wrapper-checkbox {
+    position: relative;
+    margin: 15px 0 30px 0;
+    text-align: left;
+  }
+}
+
+.reservation-tours input[type="checkbox"] + label {
+  position: relative;
+  display: block;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  color: #adadad;
+  padding-left: 45px;
+}
+.reservation-tours input[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #adadad;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: all ease-out 200ms;
+  left: 15px;
+  top: 50%;
+  //transform: translateY(-50%);
+  color: #adadad;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.reservation-tours input[type="checkbox"] + label:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 13px;
+  border-bottom: 2px solid $colorWhite;
+  border-left: 2px solid $colorWhite;
+  left: 15px;
+  top: 50%;
+  margin-top: -7px;
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: all ease-out 200ms;
+}
+
+.reservation-tours input[type="checkbox"]:checked + label:before {
+  border: 2px solid $colorWhite;
+  color: $colorWhite;
+}
+.reservation-tours input[type="checkbox"]:checked + label{
+  color: $colorWhite;
+}
+
+.reservation-tours input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  width: 36px;
+}
+
+#chk {
+  display: none;
+}

@@ -46,6 +46,12 @@
 
 
 @media only screen and (max-width : 768px) {
+  .reservation-tours__heading {
+    font-size: 24px;
+  }
+  .reservation-tours__description{
+    display: none;
+  }
   .slider__button {
     margin-bottom: 10px;
   }
@@ -81,6 +87,12 @@
       font-size: 32px;
     }
   }
+  .reservation-tours {
+    &__btn {
+      font-size: 15px;
+    }
+  }
+
   .reservation__btn {
     font-size: 15px;
   }
