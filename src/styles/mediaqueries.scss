@@ -111,6 +111,15 @@
       display: none;
     }
   }
+  .tour-slider {
+
+    &__heading {
+      font-size: 24px;
+    }
+    &__breadcrumb {
+      display: none;
+    }
+  }
 
 }
 
