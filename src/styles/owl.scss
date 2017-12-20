@@ -364,6 +364,43 @@
 }
 /*end js-slider-tours*/
 
+/* js-photo-gallery */
+.owl-slider-arrow-photo-gallery {
+  border: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  margin-top: -35px;
+  opacity: .8;
+  transition: opacity .3s;
+}
+
+.owl-slider-arrow-photo-gallery.owl-next, .owl-slider-arrow-photo-gallery.owl-prev {
+  font: 400 40px/72px "FontAwesome";
+  color: #adadad;
+  transition: .3s all ease;
+}
+
+.owl-slider-arrow-photo-gallery:hover {
+  // opacity: .5;
+  color: #41d0d9;
+  cursor: pointer;
+}
+.owl-slider-arrow-photo-gallery.owl-next {
+  right: 0px;
+}
+.owl-slider-arrow-photo-gallery.owl-prev {
+  left: 0px;
+}
+
+.owl-slider-arrow-photo-gallery.owl-prev:before {
+  content: "\f053";
+}
+.owl-slider-arrow-photo-gallery.owl-next:before {
+  content: "\f054";
+}
+/*end js-photo-gallery*/
+
 
 
 

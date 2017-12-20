@@ -256,6 +256,42 @@ $document.ready(function () {
       }
     }
   });
+
+  /**
+   * owl - js-photo-gallery
+   */
+  $('.js-photo-gallery').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:3,
+    margin:50,
+    stagePadding:40,
+    smartSpeed:450,
+    //nav:true,
+    //dots:false,
+    loop:true,
+    navElement: 'div class="owl-slider-arrow-photo-gallery"',
+    navText:[],
+    responsive:{
+      0:{
+        items:1,
+        nav:false,
+        dots:true,
+        margin:30,
+        stagePadding:5,
+      },
+      700:{
+        items:2,
+        nav:false,
+        dots:true,
+      },
+      992:{
+        items:3,
+        nav:true,
+        dots:false,
+      }
+    }
+  });
 /* swiper*/
   var swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -424,6 +460,51 @@ $document.ready(function () {
       pswp.init();
     });
   }
+
+  /*DatePicker*/
+
+
+  $('#time').bootstrapMaterialDatePicker
+  ({
+    //format : 'DD-MM-YYYY HH:mm',
+    format : 'DD-MM-YYYY HH:mm',
+    lang: 'ru',
+    date: true,
+    //time: false,
+    weekStart : 1,
+    cancelText : 'Закрыть',
+    okText : 'Далее',
+    minDate : new Date(),
+    //maxDate : '22-12-2017'
+  });
+
+  /*$('#date-format').bootstrapMaterialDatePicker
+  ({
+    format: 'dddd DD MMMM YYYY - HH:mm'
+  });
+  $('#date-fr').bootstrapMaterialDatePicker
+  ({
+    format: 'DD/MM/YYYY HH:mm',
+    lang: 'fr',
+    weekStart: 1,
+    cancelText : 'ANNULER',
+    nowButton : true,
+    switchOnClick : true
+  });
+
+  $('#date-end').bootstrapMaterialDatePicker
+  ({
+    weekStart: 0, format: 'DD/MM/YYYY HH:mm'
+  });
+  $('#date-start').bootstrapMaterialDatePicker
+  ({
+    weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true
+  }).on('change', function(e, date)
+  {
+    $('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
+  });
+
+  $('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });*/
 
 
 });

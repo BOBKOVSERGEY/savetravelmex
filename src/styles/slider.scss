@@ -1,37 +1,80 @@
 .slider {
   position: relative;
-  z-index: 1;
-  height: 700px;
+  text-align: center;
   overflow: hidden;
-  &__item-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(22, 88, 139, 0.4) url('data:image/svg+xml,\
+  &__container {
+    height: 420px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  &__item {
+    background-position: center;
+    background-size: cover;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(22, 88, 139, 0.4) url('data:image/svg+xml,\
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".20" >\
             <rect x="50" width="50" height="50" />\
             <rect y="50" width="50" height="50" />\
             </svg>');
-    background-size: 2px 2px;
+      background-size: 2px 2px;
+    }
   }
-  &__content {
-    width: 100%;
+  &__caption {
     position: absolute;
+    //width: 100%;
     top: 50%;
     left: 50%;
     z-index: 1;
-    margin-top: -20px;
+    //margin-top: -20px;
     transform: translate(-50%, -50%);
   }
-  &__item {
-    width: 100%;
-    height: 700px;
-    background-size: auto;
-    background: no-repeat 50%;
-    outline: 0;
+  &__bottom-panel {
+    height: 33px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 1;
+    transform: translateX(-50%);
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 10000%;
+      height: 100%;
+      background: #fff;
+      //margin-bottom: -1px;
+    }
+    &:before {
+      right: 100%;
+      margin-right: -2px;
+    }
+    &:after {
+      left: 100%;
+      margin-left: -2px;
+    }
   }
+  &__bottom-panel-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    cursor: pointer;
+    color: $colorWhite;
+  }
+
+
   &__heading {
     font-size: 42px;
     font-family: $fontBoldGoogle;
@@ -86,31 +129,6 @@
       }
     }
   }
-  &__bottom-panel {
-    height: 33px;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    z-index: 1;
-    transform: translateX(-50%);
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      width: 10000%;
-      height: 100%;
-      background: #fff;
-      //margin-bottom: -1px;
-    }
-    &:before {
-      right: 100%;
-      margin-right: -2px;
-    }
-    &:after {
-      left: 100%;
-      margin-left: -2px;
-    }
-  }
   &__bottom-panel-icon {
     position: absolute;
     top: 50%;
@@ -121,4 +139,30 @@
     cursor: pointer;
     color: $colorWhite;
   }
+
 }
+
+@media (min-width: 768px) {
+  .slider__container {
+    height: 480px;
+  }
+}
+
+@media (min-width: 992px) {
+  .slider__container {
+    height: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider__container {
+    height: 700px;
+  }
+}
+
+@media (min-width: 1200px) and (max-height: 700px) {
+  .slider__container {
+    height: 600px;
+  }
+}
+

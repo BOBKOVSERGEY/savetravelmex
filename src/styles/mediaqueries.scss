@@ -51,6 +51,11 @@
       width: 100%;
     }
   }
+  .slider {
+    &__caption {
+      width: 100%;
+    }
+  }
   .reservation-tours__heading {
     font-size: 24px;
   }
@@ -59,12 +64,6 @@
   }
   .slider__button {
     margin-bottom: 10px;
-  }
-  .slider {
-    height: 500px;
-    &__item {
-      height: 500px;
-    }
   }
 }
 
@@ -104,9 +103,21 @@
   .footer__letter-heading {
     margin: 20px 0;
   }
-  .slider__heading {
-    font-size: 38px;
+  .slider {
+
+    &__buttons {
+      position: relative;
+      overflow: hidden;
+      margin-top: 25px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+    &__heading {
+      font-size: 32px;
+    }
   }
+
   .breadcrumbs {
 
     &__heading {

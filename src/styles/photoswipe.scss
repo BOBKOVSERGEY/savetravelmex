@@ -860,3 +860,151 @@ a.pswp__share--download:hover {
   }
 }
 
+
+.thumbnail-rayen, .thumbnail-rayen > figure, .thumbnail-rayen .figure {
+  position: relative;
+  display: block;
+}
+
+.thumbnail-rayen img, .thumbnail-rayen figure img, .thumbnail-rayen .figure img {
+  width: 100%;
+  height: auto;
+  transition: .35s;
+  will-change: transform;
+}
+
+.thumbnail-rayen figure figcaption, .thumbnail-rayen figcaption, .thumbnail-rayen .figure .figcaption, .thumbnail-rayen .figcaption {
+  position: absolute;
+}
+
+.thumbnail {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.thumbnail .caption {
+  padding: 0;
+  color: #000;
+}
+
+.img-thumbnail,
+.thumbnail {
+  box-shadow: none;
+}
+
+.thumbnail-block {
+  display: block;
+}
+
+.thumbnail-block > img,
+.thumbnail-block a > img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail-rayen {
+  position: relative;
+}
+
+.thumbnail-rayen:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: .5;
+  background: #2f6890;
+  transition: 0.35s all ease;
+  z-index: 1;
+}
+.thumbnail-rayen:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  background: url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".20" >\
+            <rect x="50" width="50" height="50" />\
+            <rect y="50" width="50" height="50" />\
+            </svg>');
+  background-size: 2px 2px;
+  transition: 0.35s all ease;
+  z-index: 1;
+}
+
+.thumbnail-rayen.thumbnail-bordered:before, .thumbnail-rayen.thumbnail-bordered img {
+  border-radius: 0;
+}
+
+.thumbnail-rayen .figcaption {
+  position: absolute;
+  font-size: 40px;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.35s all ease;
+  z-index: 2;
+  will-change: content;
+  opacity: 0.7;
+}
+
+@media (min-width: 1200px) {
+  .thumbnail-rayen:after {
+    opacity: 1;
+  }
+
+  .thumbnail-rayen:before {
+    opacity: 0;
+  }
+  .thumbnail-rayen .figcaption {
+    opacity: 0;
+    transform: translate(-50%, 100%) scale(0);
+  }
+  .thumbnail-rayen:hover:before {
+    opacity: 0.5;
+  }
+  .thumbnail-rayen:hover:after {
+    opacity: 0;
+  }
+  .thumbnail-rayen:hover .figcaption {
+    opacity: .7;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.tablet .thumbnail-rayen .figcaption,
+.mobile .thumbnail-rayen .figcaption {
+  left: 50%;
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.tablet .thumbnail-rayen .figcaption .icon,
+.mobile .thumbnail-rayen .figcaption .icon {
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.tablet .thumbnail-rayen:before,
+.mobile .thumbnail-rayen:before {
+  opacity: 0.25;
+}
+
+.flickr-item.thumbnail-classic {
+  will-change: transform;
+  transition: .3s all ease;
+}
+
+.flickr-item.thumbnail-classic:hover {
+  transform: scale(1.08);
+}
+
