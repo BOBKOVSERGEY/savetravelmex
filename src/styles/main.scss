@@ -16,11 +16,19 @@ a {
   overflow: hidden;
   background-color: #fff;
 }
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @import "slick";
 @import "timecircle";
 @import "photoswipe";
 @import "photogallery";
 @import "datepiker";
+@import "pagination";
+@import "search";
 @import "owl";
 @import "animate";
 @import "swiper";
@@ -40,6 +48,7 @@ a {
 @import "ourservices";
 @import "reviews";
 @import "blog";
+@import "blogpage";
 @import "bigbg";
 @import "reservation";
 @import "footer";

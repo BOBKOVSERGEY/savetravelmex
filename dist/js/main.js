@@ -272,6 +272,9 @@ $document.ready(function () {
     loop:true,
     navElement: 'div class="owl-slider-arrow-photo-gallery"',
     navText:[],
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
     responsive:{
       0:{
         items:1,

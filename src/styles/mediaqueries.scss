@@ -46,6 +46,9 @@
 
 
 @media only screen and (max-width : 768px) {
+  .breadcrumbs__heading {
+    font-size: 32px;
+  }
   .tour-slider {
     &__caption {
       width: 100%;
