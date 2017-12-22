@@ -475,8 +475,8 @@ $document.ready(function () {
     date: true,
     //time: false,
     weekStart : 1,
-    cancelText : 'Закрыть',
-    okText : 'Далее',
+    cancelText : 'Отмена',
+    okText : 'Ok',
     minDate : new Date(),
     //maxDate : '22-12-2017'
   });
