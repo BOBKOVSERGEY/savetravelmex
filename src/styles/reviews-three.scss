@@ -1,5 +1,5 @@
 .reviews-three {
-  padding: 0 0 60px 0;
+  padding: 60px 0 60px 0;
   text-align: center;
   &__heading {
     color: $colorBlackText;
@@ -27,11 +27,27 @@
   &__item-name {
     margin-top: 15px;
     font-family: $fontBoldGoogle;
+    &_black {
+      color: $colorBlackText;
+    }
   }
   &__item-dots {
     font-family: $fontBoldGoogle;
     font-size: 24px;
     letter-spacing: 2px;
+    & a {
+      color: #41d0d9;
+      transition: .3s all ease;
+      &:hover {
+        color: #22a3ab;
+      }
+    }
+  }
+  &__item-icon-quote {
+    margin: 20px 0 10px 0;
+    & i {
+      font-size: 36px;
+    }
   }
   &__button-all-review {
     margin: 30px 15px;
