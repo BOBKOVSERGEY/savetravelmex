@@ -5,7 +5,7 @@
   &__wrapper{
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(47, 104, 144, 0.6) 20%, rgba(64, 202, 213, 0.6) 80%);
+    background: linear-gradient(135deg, rgba(47, 104, 144, 0.8) 20%, rgba(64, 202, 213, 0.8) 80%);
 
 
   }
@@ -17,12 +17,6 @@
     text-align: center;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,\
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".20" >\
-            <rect x="50" width="50" height="50" />\
-            <rect y="50" width="50" height="50" />\
-            </svg>');
-    background-size: 2px 2px;
   }
   &__heading {
     color: $colorWhite;
@@ -70,6 +64,7 @@
         color: #fff;
         background-color: #1c3e56;
         border-color: #1c3e56;
+        outline: none;
       }
     }
   }

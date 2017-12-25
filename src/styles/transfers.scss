@@ -1,8 +1,5 @@
-.categories-tours {
+.transfers {
   padding: 40px 0;
-  &_category {
-    padding: 40px 0 0 0;
-  }
   &__heading {
     text-align: center;
     color: $colorBlackText;
@@ -65,21 +62,21 @@
     }
   }
 }
-.categories-tours__item {
+.transfers__item {
   position: relative;
   display: block;
 }
 
-.categories-tours__item .categories-tours__item-img-wrap {
+.transfers__item .transfers__item-img-wrap {
   position: relative;
   display: inline-block;
 }
 
-.categories-tours__item .categories-tours__item-img-wrap, .categories-tours__item .categories-tours__item-img-wrap img {
+.transfers__item .transfers__item-img-wrap, .transfers__item .transfers__item-img-wrap img {
   width: 100%;
 }
 
-.categories-tours__item .categories-tours__item-img-wrap:before {
+.transfers__item .transfers__item-img-wrap:before {
   content: '';
   position: absolute;
   top: 0;
@@ -90,7 +87,7 @@
   background: rgba(47, 104, 144, 0.7);
 }
 
-.categories-tours__item .categories-tours__item-body {
+.transfers__item .transfers__item-body {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,69 +99,69 @@
   will-change: transform;
 }
 
-.categories-tours__item .categories-tours__item-body * {
+.transfers__item .transfers__item-body * {
   color: #fff;
 }
 
 @media (min-width: 992px) {
-  .categories-tours__item .categories-tours__item-body {
+  .transfers__item .transfers__item-body {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
 
 @media (min-width: 1200px) {
-  .categories-tours__item .categories-tours__item-body {
-    padding-left: 85px;
-    padding-right: 85px;
+  .transfers__item .transfers__item-body {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
 @media (min-width: 1200px) {
-  .categories-tours__item .categories-tours__item-body, .categories-tours__item .categories-tours__item-img-wrap:before {
+  .transfers__item .transfers__item-body, .transfers__item .transfers__item-img-wrap:before {
     opacity: 0;
     transition: .3s all ease;
   }
-  .categories-tours__item .categories-tours__item-img-wrap:before {
+  .transfers__item .transfers__item-img-wrap:before {
     transform: scale(0);
     visibility: hidden;
   }
-  .categories-tours__item:hover .categories-tours__item-body, .categories-tours__item:hover .categories-tours__item-img-wrap:before {
+  .transfers__item:hover .transfers__item-body, .transfers__item:hover .transfers__item-img-wrap:before {
     opacity: 1;
   }
-  .categories-tours__item:hover .categories-tours__item-img-wrap:before {
+  .transfers__item:hover .transfers__item-img-wrap:before {
     transform: scale(1);
     visibility: visible;
   }
    /*active*/
-  .active.categories-tours__item .categories-tours__item-img-wrap:before {
+  .active.transfers__item .transfers__item-img-wrap:before {
     transform: scale(1);
     visibility: visible;
   }
-  .active.categories-tours__item .categories-tours__item-body, .active.categories-tours__item .categories-tours__item-img-wrap:before {
+  .active.transfers__item .transfers__item-body, .active.transfers__item .transfers__item-img-wrap:before {
     opacity: 1;
   }
 }
 
-.categories-tours__item-img-wrap, .categories-tours__item-img-wrap img {
+.transfers__item-img-wrap, .transfers__item-img-wrap img {
   height: auto;
   min-height: 350px;
 }
 
-.categories-tours__item-body, .categories-tours__item-img-wrap:before {
+.transfers__item-body, .transfers__item-img-wrap:before {
   opacity: 1;
 }
 
-.categories-tours__item-img-wrap:before {
+.transfers__item-img-wrap:before {
   transform: scale(1);
   visibility: visible;
 }
 
 @media (min-width: 1200px) {
-  .categories-tours__item-body, .categories-tours__item-img-wrap:before {
+  .transfers__item-body, .transfers__item-img-wrap:before {
     opacity: 1;
   }
-  .categories-tours__item-body {
+  .transfers__item-body {
     padding-left: 25px;
     padding-right: 25px;
   }

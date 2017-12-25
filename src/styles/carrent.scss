@@ -1,4 +1,4 @@
-.our-team {
+.car-rent {
   padding: 20px 0 60px 0;
   &__wrapper-item {
     & > [class*='col'] {
@@ -27,6 +27,7 @@
       left: 0;
       right: 0;
       width: 100%;
+      border: 1px solid rgba(#fff, .2);
       height: 100%;
       background: rgba(37, 83, 116, 0.6);
     }
@@ -101,15 +102,44 @@
       border-color: #22a3ab;
     }
   }
+  &__item-list {
+    & li {
+      position: relative;
+      padding-left: 12px;
+    }
+    & li:before {
+      content: '';
+      display: inline-block;
+      background: $colorWhite;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+  }
 
+}
+.regulations {
+  padding: 60px 0;
+  text-align: center;
+  &__heading {
+    font-family: $fontBoldGoogle;
+    text-align: center;
+    color: $colorBlackText;
+    font-size: 52px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 }
 
 
 @media (min-width: 1200px) {
-  .our-team__item {
+  .car-rent__item {
     overflow: hidden;
   }
-  .our-team__item .our-team__item-content {
+  .car-rent__item .car-rent__item-content {
     padding-left: 30px;
     padding-right: 30px;
     opacity: 0;
@@ -118,24 +148,37 @@
     transform: translate(-50%, 100%);
     transition: .3s all ease;
   }
-  .our-team__item .our-team__item-img-wrap:before {
+  .car-rent__item .car-rent__item-img-wrap:before {
     opacity: 0;
     transition: .3s opacity ease;
   }
-  .our-team__item:hover .our-team__item-content {
+  .car-rent__item:hover .car-rent__item-content {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
   }
-  .our-team__item:hover .our-team__item-img-wrap:before {
+  .car-rent__item:hover .car-rent__item-img-wrap:before {
     opacity: 1;
   }
 }
 
 @media (min-width: 1800px) {
-  .our-team__item .our-team__item-content {
+  .car-rent__item .car-rent__item-content {
     padding-left: 100px;
     padding-right: 100px;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .car-rent {
+    &__heading {
+      font-size: 38px;
+    }
+  }
+  .regulations {
+    &__heading {
+      font-size: 38px;
+    }
   }
 }

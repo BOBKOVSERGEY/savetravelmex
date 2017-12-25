@@ -38,7 +38,8 @@
 .dtp .dtp-picker-time > .dtp-select-minute { cursor: pointer; }
 
 .dtp .dtp-buttons { padding: 0 1em 1em 1em; text-align: center; }
-.dtp .dtp-buttons .btn{ margin-right: 5px}
+.dtp .dtp-buttons .btn{ margin-right: 5px; color:$colorWhite; background: #adadad; transition: .3s ease-out;}
+.dtp .dtp-buttons .btn:hover{ color:#41d0d9; background: #ccc}
 
 .dtp.hidden, .dtp .hidden { display: none; }
 .dtp .invisible { visibility: hidden; }

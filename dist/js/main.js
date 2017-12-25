@@ -516,6 +516,19 @@ $document.ready(function () {
     minDate : new Date(),
     //maxDate : '22-12-2017'
   });
+  $('.time-rent-car').bootstrapMaterialDatePicker
+  ({
+    //format : 'DD-MM-YYYY HH:mm',
+    format : 'DD-MM-YYYY HH:mm',
+    lang: 'ru',
+    date: true,
+    //time: false,
+    weekStart : 1,
+    cancelText : 'Отмена',
+    okText : 'Ok',
+    minDate : new Date(),
+    //maxDate : '22-12-2017'
+  });
 
   /*$('#date-format').bootstrapMaterialDatePicker
   ({

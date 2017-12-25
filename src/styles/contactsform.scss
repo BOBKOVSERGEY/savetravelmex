@@ -1,11 +1,13 @@
-.reservation-tours {
-  height: 900px;
-  background: url(../images/bg-rezervation-new.jpg)  no-repeat center fixed;
-  background-size: cover;
+.contacts-form {
+  padding: 0 0 60px 0;
+  //height: 700px;
+  //background: url(../images/bg-rezervation-new.jpg)  no-repeat center fixed;
+  background: $colorWhite;
+  //background-size: cover;
   &__wrapper{
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(47, 104, 144, 0.8) 20%, rgba(64, 202, 213, 0.8) 80%);
+    //background: linear-gradient(135deg, rgba(47, 104, 144, 0.6) 20%, rgba(64, 202, 213, 0.6) 80%);
   }
   &__wrapper-bg {
     display: flex;
@@ -17,9 +19,10 @@
     height: 100%;
   }
   &__heading {
-    color: $colorWhite;
+    color: $colorBlackText;
     font-family: $fontBoldGoogle;
     font-size: 42px;
+    margin: 30px 0;
   }
   &__description {
     margin: 30px 0;
@@ -34,7 +37,7 @@
     position: relative;
     border: none;
     display: inline-block;
-    max-width: 270px;
+    min-width: 240px;
     padding: 10px 19px;
     font-size: 18px;
     border-radius: 30px;
@@ -45,7 +48,7 @@
       position: absolute;
       top: 50%;
       width: 1000%;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(#adadad, 0.2);
       transform: translateY(-50%);
       pointer-events: none;
     }
@@ -72,26 +75,27 @@
     width: 100%;
     padding: 10px 19px;
     font-size: 18px;
-    color: $colorWhite;
+    color: #adadad;
     background: none;
-    border: 2px solid $colorWhite;
+    border: 2px solid #41d0d9;
     border-radius: 35px;
     transition: .3s ease-out;
     &::-webkit-input-placeholder {
-      color: $colorWhite;
+      color: #adadad;
     }
     &::-moz-placeholder {
-      color: $colorWhite;
+      color: #adadad;
     }
     &:-ms-input-placeholder {
-      color: $colorWhite;
+      color: #adadad;
     }
     &:placeholder-shown {
-      color: $colorWhite;
+      color: #adadad;
     }
     &:focus {
       outline: none;
-      box-shadow: inset 0 0 5px $colorWhite;
+      border-color: #22a3ab;
+      box-shadow: inset 0 0 5px #22a3ab;
       transform: scale(1.02);
     }
   }
@@ -100,33 +104,34 @@
     height: 170px;
     min-height: 50px;
     max-height: 370px;
-    color: $colorWhite;
+    color: #adadad;
     resize: vertical;
     border-radius: 25px;
     padding: 10px 19px;
     font-size: 18px;
     background: none;
-    border: 2px solid $colorWhite;
+    border: 2px solid #41d0d9;
     transition: .3s ease-out;
     &:focus {
       outline: none;
-      box-shadow: inset 0 0 5px $colorWhite;
+      border-color: #22a3ab;
+      box-shadow: inset 0 0 5px #22a3ab;
       transform: scale(1.02);
     }
     &::-webkit-input-placeholder {
-      color: $colorWhite;
+      color: #adadad;
 
     }
     &::-moz-placeholder {
-      color: $colorWhite;
+      color: #adadad;
 
     }
     &:-ms-input-placeholder {
-      color: $colorWhite;
+      color: #adadad;
 
     }
     &:placeholder-shown {
-      color: $colorWhite;
+      color: #adadad;
 
     }
   }
@@ -153,7 +158,7 @@
   }
 }
 
-.reservation-tours input[type="checkbox"] + label {
+.contacts-form input[type="checkbox"] + label {
   position: relative;
   display: block;
   width: 100%;
@@ -165,7 +170,7 @@
   color: #adadad;
   padding-left: 45px;
 }
-.reservation-tours input[type="checkbox"] + label:before {
+.contacts-form input[type="checkbox"] + label:before {
   content: '';
   position: absolute;
   box-sizing: border-box;
@@ -186,13 +191,13 @@
   cursor: pointer;
 }
 
-.reservation-tours input[type="checkbox"] + label:after {
+.contacts-form input[type="checkbox"] + label:after {
   content: '';
   position: absolute;
   width: 30px;
   height: 13px;
-  border-bottom: 2px solid $colorWhite;
-  border-left: 2px solid $colorWhite;
+  border-bottom: 2px solid #adadad;
+  border-left: 2px solid #adadad;
   left: 15px;
   top: 50%;
   margin-top: -7px;
@@ -202,15 +207,15 @@
   transition: all ease-out 200ms;
 }
 
-.reservation-tours input[type="checkbox"]:checked + label:before {
-  border: 2px solid $colorWhite;
-  color: $colorWhite;
+.contacts-form input[type="checkbox"]:checked + label:before {
+  border: 2px solid #adadad;
+  color: #adadad;
 }
-.reservation-tours input[type="checkbox"]:checked + label{
-  color: $colorWhite;
+.contacts-form input[type="checkbox"]:checked + label{
+  color: #adadad;
 }
 
-.reservation-tours input[type="checkbox"]:checked + label:after {
+.contacts-form input[type="checkbox"]:checked + label:after {
   opacity: 1;
   width: 36px;
 }
