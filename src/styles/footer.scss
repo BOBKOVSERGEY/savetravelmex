@@ -63,8 +63,8 @@
     display: inline-block;
     width: 50px;
     height: 50px;
-    color: #adadad;
-    border: 5px solid #adadad;
+    color: #2f6890;
+    border: 5px solid #2f6890;
     border-radius: 50%;
     transition: .3s all ease;
     font-size: 25px;
@@ -132,7 +132,8 @@
   }
   &__letter-description {
     font-family: $fontBoldGoogle;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    padding: 0 30px;
   }
   &__letter-input-wrapper {
     & input {

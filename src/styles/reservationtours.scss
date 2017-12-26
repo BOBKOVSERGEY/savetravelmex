@@ -59,6 +59,12 @@
       color: #fff;
       background-color: #41d0d9;
       border-color: #41d0d9;
+      &:disabled {
+        background: #a1a1a1;
+        &:hover {
+          background: lighten(#a1a1a1, 10%);
+        }
+      }
       &:hover, &:focus, &:active {
         color: #fff;
         background-color: #22a3ab;
@@ -77,6 +83,13 @@
     border: 2px solid $colorWhite;
     border-radius: 35px;
     transition: .3s ease-out;
+    &.error {
+      border: 2px solid #a94442;
+
+      &:focus {
+        box-shadow: inset 0 0 5px rgba(#a94442, .8);
+      }
+    }
     &::-webkit-input-placeholder {
       color: $colorWhite;
     }
@@ -131,6 +144,7 @@
     }
   }
   &__wrapper-input, &__wrapper-textarea {
+    position: relative;
     margin-bottom: 15px;
   }
   &__wrapper-button {
@@ -151,6 +165,14 @@
       }
     }
   }
+  & label.error {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    //font-family: $fontLight;
+    font-size: 11px;
+    color: #a94442;;
+  }
 }
 
 .reservation-tours input[type="checkbox"] + label {
@@ -164,6 +186,7 @@
   cursor: pointer;
   color: #adadad;
   padding-left: 45px;
+  font-size: 17px;
 }
 .reservation-tours input[type="checkbox"] + label:before {
   content: '';

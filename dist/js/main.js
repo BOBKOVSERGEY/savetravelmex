@@ -559,6 +559,70 @@ $document.ready(function () {
   $('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });*/
 
 
+  /*validate reservation-tours__form*/
+  $('.reservation-tours__form').validate({
+    rules: {
+      name: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      policy: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя"
+      },
+      email: {
+        required: "Введите адрес электронной почты",
+        email: "Не корректный адрес электронной почты"
+      },
+      policy: {
+        required: "Введите Ваши контакты"
+      }
+    }
+  });
+
+  /*
+  * validate policy
+  * '.js-private-policy click': function ($el) {
+   this.checkPolicy();
+   },
+
+   '{events.restoreDefaults}': function () {
+   this.restoreDefaults();
+   },
+
+   '{events.focusToFirstItem}': function () {
+   this.focusToFirstItem();
+   },
+
+
+   checkPolicy: function () {
+   if (this.element.find(".js-private-policy").is(':checked')) {
+   this.element.find("[type=submit]").prop('disabled', false);
+   } else {
+   this.element.find("[type=submit]").prop('disabled', true);
+   }
+   },
+   */
+
+  $('.js-policy').on('click', function($el){
+    checkPolicy();
+  });
+  function checkPolicy () {
+    if ($(".js-policy").is(':checked')) {
+      $('.reservation-tours__btn_blue').prop('disabled', false);
+    } else {
+      $('.reservation-tours__btn_blue').prop('disabled', true);
+    }
+  }
+  /* end validate policy */
+
 });
 
 
