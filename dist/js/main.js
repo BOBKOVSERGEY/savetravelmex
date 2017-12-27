@@ -623,6 +623,125 @@ $document.ready(function () {
   }
   /* end validate policy */
 
+  /*validate modal-reviews__form*/
+  $('.modal-reviews__form').validate({
+    rules: {
+      name: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      comment: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя"
+      },
+      email: {
+        required: "Введите адрес электронной почты",
+        email: "Не корректный адрес"
+      },
+      comment: {
+        required: "Введите Ваш отзыв"
+      }
+    }
+  });
+
+  $('.js-policy').on('click', function($el){
+    checkPolicy();
+  });
+  function checkPolicy () {
+    if ($(".js-policy").is(':checked')) {
+      $('.modal-reviews__btn_blue').prop('disabled', false);
+    } else {
+      $('.modal-reviews__btn_blue').prop('disabled', true);
+    }
+  }
+
+  /* end validate modal-reviews__form*/
+
+  /*validate comments__form*/
+  $('.comments__form').validate({
+    rules: {
+      name: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      comment: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя"
+      },
+      email: {
+        required: "Введите адрес электронной почты",
+        email: "Не корректный адрес"
+      },
+      comment: {
+        required: "Введите Ваш комментарий"
+      }
+    }
+  });
+  /*end comments__form */
+
+  /*modal*/
+  var modalVerticalCenterClass = ".modal";
+  function centerModals($element) {
+    var $modals;
+    if ($element.length) {
+      $modals = $element;
+    } else {
+      $modals = $(modalVerticalCenterClass + ':visible');
+    }
+    $modals.each( function(i) {
+      var $clone = $(this).clone().css('display', 'block').appendTo('body');
+      var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
+      top = top > 0 ? top : 0;
+      $clone.remove();
+      $(this).find('.modal-content').css("margin-top", top);
+    });
+  }
+  $(modalVerticalCenterClass).on('show.bs.modal', function(e) {
+    centerModals($(this));
+  });
+  $(window).on('resize', centerModals);
+  /*end modal*/
+
+  /*******inputfile******/
+
+  var inputs = document.querySelectorAll( '.inputfile' );
+  Array.prototype.forEach.call( inputs, function( input )
+  {
+    var label	 = input.nextElementSibling,
+      labelVal = label.innerHTML;
+
+    input.addEventListener( 'change', function( e )
+    {
+      var fileName = '';
+      if( this.files && this.files.length > 1 )
+        fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+      else
+        fileName = e.target.value.split( '\\' ).pop();
+
+      if( fileName )
+        label.querySelector( 'span' ).innerHTML = fileName;
+      else
+        label.innerHTML = labelVal;
+    });
+  });
+
+  /*******end inputfile******/
+
+
 });
 
 

@@ -1,28 +1,20 @@
-.contacts-form {
-  padding: 0 0 60px 0;
-  //height: 700px;
-  //background: url(../images/bg-rezervation-new.jpg)  no-repeat center fixed;
-  background: $colorWhite;
-  //background-size: cover;
+.modal-reviews {
+  padding: 15px;
   &__wrapper{
     width: 100%;
     height: 100%;
     //background: linear-gradient(135deg, rgba(47, 104, 144, 0.6) 20%, rgba(64, 202, 213, 0.6) 80%);
   }
-  &__wrapper-bg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+  &__form-wrapper {
+    margin: 15px;
   }
+
   &__heading {
     color: $colorBlackText;
     font-family: $fontBoldGoogle;
     font-size: 42px;
     margin: 30px 0;
+    text-align: center;
   }
   &__description {
     margin: 30px 0;
@@ -52,6 +44,7 @@
       transform: translateY(-50%);
       pointer-events: none;
     }
+
     &:before {
       right: 110%;
     }
@@ -68,6 +61,12 @@
         border-color: #22a3ab;
         outline: none;
       }
+      &:disabled {
+        background: #a1a1a1;
+        &:hover {
+          background: lighten(#a1a1a1, 10%);
+        }
+      }
     }
   }
   &__input {
@@ -80,6 +79,13 @@
     border: 2px solid #41d0d9;
     border-radius: 35px;
     transition: .3s ease-out;
+    &.error {
+      border: 2px solid #a94442;
+      &:focus {
+        border: 2px solid #a94442;
+        box-shadow: inset 0 0 5px rgba(#a94442, .8);
+      }
+    }
     &::-webkit-input-placeholder {
       color: #adadad;
     }
@@ -112,6 +118,14 @@
     background: none;
     border: 2px solid #41d0d9;
     transition: .3s ease-out;
+    &.error {
+      border: 2px solid #a94442;
+
+      &:focus {
+        border: 2px solid #a94442;
+        box-shadow: inset 0 0 5px rgba(#a94442, .8);
+      }
+    }
     &:focus {
       outline: none;
       border-color: #22a3ab;
@@ -136,6 +150,7 @@
     }
   }
   &__wrapper-input, &__wrapper-textarea {
+    position: relative;
     margin-bottom: 15px;
   }
   &__wrapper-button {
@@ -156,9 +171,17 @@
       }
     }
   }
+  & label.error {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    //font-family: $fontLight;
+    font-size: 11px;
+    color: #a94442;;
+  }
 }
 
-.contacts-form input[type="checkbox"] + label {
+.modal-reviews input[type="checkbox"] + label {
   position: relative;
   display: block;
   width: 100%;
@@ -170,7 +193,7 @@
   color: #adadad;
   padding-left: 45px;
 }
-.contacts-form input[type="checkbox"] + label:before {
+.modal-reviews input[type="checkbox"] + label:before {
   content: '';
   position: absolute;
   box-sizing: border-box;
@@ -191,7 +214,7 @@
   cursor: pointer;
 }
 
-.contacts-form input[type="checkbox"] + label:after {
+.modal-reviews input[type="checkbox"] + label:after {
   content: '';
   position: absolute;
   width: 30px;
@@ -207,19 +230,69 @@
   transition: all ease-out 200ms;
 }
 
-.contacts-form input[type="checkbox"]:checked + label:before {
+.modal-reviews input[type="checkbox"]:checked + label:before {
   border: 2px solid #adadad;
   color: #adadad;
 }
-.contacts-form input[type="checkbox"]:checked + label{
+.modal-reviews input[type="checkbox"]:checked + label{
   color: #adadad;
 }
 
-.contacts-form input[type="checkbox"]:checked + label:after {
+.modal-reviews input[type="checkbox"]:checked + label:after {
   opacity: 1;
   width: 36px;
 }
 
 #chk {
   display: none;
+}
+
+
+
+.upload-file {
+  color: #41d0d9;
+  margin: 10px 0;
+  display: inline-block;
+  cursor: pointer;
+ // background-color: #333399;
+  //width: 150px;
+  transition: all 0.3s;
+ & span {
+   //background-color: #333399;
+ }
+
+}
+.upload-file:hover {
+  color: #22a3ab;
+}
+.hide-type-file {
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+}
+@media only screen and (max-width : 768px) {
+  .modal-reviews {
+
+    &__heading {
+
+      font-size: 32px;
+
+    }
+  }
+}
+@media only screen and (max-width : 480px) {
+  .modal-reviews {
+    &__heading {
+      font-size: 22px;
+    }
+    &__btn {
+      min-width: 200px;
+    }
+    &__form-wrapper {
+      margin: 0px;
+    }
+  }
 }
