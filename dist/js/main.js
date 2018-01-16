@@ -91,6 +91,15 @@ $document.ready(function () {
 
   $('[data-toggle="tooltip"]').tooltip();
 
+  /**
+   * year copyright
+   */
+  var now = new Date();
+  var getYear = now.getFullYear();
+  var elCopyrightYear = document.getElementById('copyright-year');
+  if (elCopyrightYear) {
+    elCopyrightYear.innerHTML = getYear;
+  }
 
   /**
    * main slider
@@ -587,6 +596,40 @@ $document.ready(function () {
     }
   });
 
+  /*validate reservation-tours__form*/
+  $('.contacts-form__form').validate({
+    rules: {
+      name: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      policy: {
+        required: true,
+      },
+      comment: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя"
+      },
+      email: {
+        required: "Введите адрес электронной почты",
+        email: "Не корректный адрес электронной почты"
+      },
+      policy: {
+        required: "Введите Ваши контакты"
+      },
+      comment: {
+        required: "Введите Ваш комментарии"
+      }
+    }
+  });
+
   /*
   * validate policy
   * '.js-private-policy click': function ($el) {
@@ -611,16 +654,6 @@ $document.ready(function () {
    },
    */
 
-  $('.js-policy').on('click', function($el){
-    checkPolicy();
-  });
-  function checkPolicy () {
-    if ($(".js-policy").is(':checked')) {
-      $('.reservation-tours__btn_blue').prop('disabled', false);
-    } else {
-      $('.reservation-tours__btn_blue').prop('disabled', true);
-    }
-  }
   /* end validate policy */
 
   /*validate modal-reviews__form*/
@@ -656,9 +689,9 @@ $document.ready(function () {
   });
   function checkPolicy () {
     if ($(".js-policy").is(':checked')) {
-      $('.modal-reviews__btn_blue').prop('disabled', false);
+      $("[type=submit]").prop('disabled', false);
     } else {
-      $('.modal-reviews__btn_blue').prop('disabled', true);
+      $("[type=submit]").prop('disabled', true);
     }
   }
 

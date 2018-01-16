@@ -59,6 +59,12 @@
       color: #fff;
       background-color: #41d0d9;
       border-color: #41d0d9;
+      &:disabled {
+        background: #a1a1a1;
+        &:hover {
+          background: lighten(#a1a1a1, 10%);
+        }
+      }
       &:hover, &:focus, &:active {
         color: #fff;
         background-color: #22a3ab;
