@@ -2171,7 +2171,7 @@ ul ul, ul ol, ol ul, ol ol {
 .rd-navbar-collapse-wrap {
   //display: none;
   transition: .3s all ease;
-  background: rgba(6,58,94,.8);
+  background: rgba(6,58,94,.5);
   padding: 10px 0;
 }
 
@@ -2248,8 +2248,10 @@ ul ul, ul ol, ol ul, ol ol {
 .rd-navbar-collapse-wrap__contacts {
   padding-left: 15px;
   & a {
+    transition: .3s all ease;
     //color: $colorGrayText;
     &:hover {
+
       color: #41d0d9;
     }
   }
